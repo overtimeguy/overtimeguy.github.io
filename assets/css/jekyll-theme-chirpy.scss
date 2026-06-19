@@ -3,7 +3,7 @@
 
 @use 'abstracts/variables' with (
   $font-family-base: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif),
-  $font-family-heading: ('Aritaburi', 'RIDIBatang', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', serif)
+  $font-family-heading: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif)
 );
 
 /* prettier-ignore */
@@ -15,32 +15,43 @@
 
 /* append your custom style below */
 
-@font-face {
-  font-family: 'Aritaburi';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 600;
+:root {
+  --blog-font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --post-content-font-size: 0.95rem;
 }
 
-@font-face {
-  font-family: 'RIDIBatang';
-  src:
-    local('RIDIBatang'),
-    url('https://cdn.jsdelivr.net/npm/@kfonts/ridi-batang/RIDIBatang.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@kfonts/ridi-batang/RIDIBatang.woff') format('woff');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-
+.post-content,
 .content {
-  font-family: 'RIDIBatang', 'Batang', 'AppleMyungjo', serif;
+  font-family: var(--blog-font-family);
+  font-size: var(--post-content-font-size);
 }
 
-.content :is(h1, h2, h3, h4, h5, h6) {
-  font-family: 'Aritaburi', 'RIDIBatang', 'Batang', serif;
-  font-weight: 600;
+body,
+#sidebar .site-title,
+#sidebar .site-title a,
+#sidebar .site-subtitle,
+#sidebar :is(a, span, button),
+#sidebar .nav-link,
+#sidebar .nav-link span,
+#topbar,
+#panel-wrapper,
+#panel-wrapper :is(a, span, p, li, h2, h3, h4),
+#panel-wrapper .panel-heading,
+#panel-wrapper .post-tag,
+#toc-wrapper .toc-link,
+#toc-bar,
+#toc-solo-trigger,
+#toc-solo-trigger .label,
+.post-meta,
+.post-tail-wrapper,
+.post-navigation .btn,
+.content :is(h1, h2, h3, h4, h5, h6, p, li, blockquote, table, th, td) {
+  font-family: var(--blog-font-family) !important;
+}
+
+.content :is(p, li, blockquote, table, th, td) {
+  font-size: var(--post-content-font-size);
+  line-height: 1.75;
 }
 
 .content :is(code, pre, kbd, samp),
