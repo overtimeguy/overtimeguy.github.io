@@ -1,0 +1,16 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $font-family-base: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif),
+  $font-family-heading: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif)
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
