@@ -3,7 +3,7 @@
 
 @use 'abstracts/variables' with (
   $font-family-base: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif),
-  $font-family-heading: ('Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif)
+  $font-family-heading: ('Aritaburi', 'RIDIBatang', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', serif)
 );
 
 /* prettier-ignore */
@@ -14,3 +14,36 @@
 ';
 
 /* append your custom style below */
+
+@font-face {
+  font-family: 'Aritaburi';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'RIDIBatang';
+  src:
+    local('RIDIBatang'),
+    url('https://cdn.jsdelivr.net/npm/@kfonts/ridi-batang/RIDIBatang.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@kfonts/ridi-batang/RIDIBatang.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.content {
+  font-family: 'RIDIBatang', 'Batang', 'AppleMyungjo', serif;
+}
+
+.content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Aritaburi', 'RIDIBatang', 'Batang', serif;
+  font-weight: 600;
+}
+
+.content :is(code, pre, kbd, samp),
+.content :is(code, pre, kbd, samp) * {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+}
