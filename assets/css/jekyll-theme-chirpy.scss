@@ -17,7 +17,10 @@
 
 :root {
   --blog-font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  --post-content-font-size: 0.95rem;
+  --blog-heading-font-weight: 800;
+  --blog-ui-font-size: 0.86rem;
+  --blog-small-font-size: 0.78rem;
+  --post-content-font-size: 0.88rem;
 }
 
 .post-content,
@@ -26,7 +29,12 @@
   font-size: var(--post-content-font-size);
 }
 
+body {
+  font-size: var(--blog-ui-font-size);
+}
+
 body,
+#sidebar,
 #sidebar .site-title,
 #sidebar .site-title a,
 #sidebar .site-subtitle,
@@ -51,7 +59,101 @@ body,
 
 .content :is(p, li, blockquote, table, th, td) {
   font-size: var(--post-content-font-size);
-  line-height: 1.75;
+  line-height: 1.5;
+}
+
+.post-title,
+#sidebar .site-title,
+#panel-wrapper .panel-heading,
+#toc-wrapper .panel-heading,
+.content :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--blog-heading-font-weight) !important;
+}
+
+#sidebar .nav-link span {
+  font-weight: 700 !important;
+}
+
+#sidebar .site-title {
+  font-size: 1.34rem !important;
+  line-height: 1.15;
+}
+
+#sidebar .site-subtitle {
+  font-size: 0.76rem !important;
+}
+
+#sidebar .nav-link span {
+  font-size: 0.72rem !important;
+}
+
+#topbar,
+.post-meta,
+.post-tail-wrapper,
+.post-navigation .btn {
+  font-size: var(--blog-small-font-size) !important;
+}
+
+.post-title {
+  font-size: 1.46rem !important;
+  line-height: 1.25;
+}
+
+#panel-wrapper {
+  font-size: var(--blog-small-font-size) !important;
+}
+
+#panel-wrapper .panel-heading,
+#toc-wrapper .panel-heading {
+  font-size: 0.88rem !important;
+}
+
+#panel-wrapper .post-tag,
+#toc-wrapper .toc-link,
+#toc-bar,
+#toc-solo-trigger,
+#toc-solo-trigger .label {
+  font-size: 0.72rem !important;
+}
+
+.content h1 {
+  font-size: 1.45rem;
+}
+
+.content h2 {
+  font-size: 1.28rem;
+}
+
+.content h3 {
+  font-size: 1.12rem;
+}
+
+.content h4 {
+  font-size: 1rem;
+}
+
+.content h5 {
+  font-size: 0.95rem;
+}
+
+.content h6 {
+  font-size: 0.9rem;
+}
+
+.content p {
+  margin-bottom: 0.65rem;
+}
+
+.content :is(ul, ol) {
+  margin-bottom: 0.75rem;
+}
+
+.content li + li {
+  margin-top: 0.15rem;
+}
+
+.content blockquote {
+  margin-block: 0.75rem;
 }
 
 .content :is(code, pre, kbd, samp),
